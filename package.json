@@ -1,12 +1,22 @@
 {
   "name": "prakit-kol-dashboard",
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "test": "echo \"Error: no test specified\" && exit 1"
+  "description": "KOL Data Scraping and Directory System",
+  "main": "src/index.js",
+ "scripts": {
+    "start": "node src/index.js",
+    "dev": "nodemon src/index.js",
+    "test": "node src/test.js"
   },
-  "keywords": [],
-  "author": "",
-  "license": "ISC"
+  "keywords": ["kol", "scraping", "social-media"],
+  "author": "Your Name",
+  "license": "MIT",
+  "dependencies": {
+    "puppeteer": "^22.0.0",
+    "express": "^4.18.2",
+    "dotenv": "^16.3.1"
+  },
+  "devDependencies": {
+    "nodemon": "^3.0.2"
+  }
 }
