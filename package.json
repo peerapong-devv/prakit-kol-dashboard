@@ -3,20 +3,56 @@
   "version": "1.0.0",
   "description": "KOL Data Scraping and Directory System",
   "main": "src/index.js",
- "scripts": {
+  "scripts": {
     "start": "node src/index.js",
-    "dev": "nodemon src/index.js",
+    "dev": "concurrently \"npm run dev:backend\" \"npm run dev:frontend\"",
+    "dev:backend": "nodemon src/index.js",
+    "dev:frontend": "next dev -p 3001",
+    "build": "next build",
     "test": "node src/test.js"
   },
-  "keywords": ["kol", "scraping", "social-media"],
+  "keywords": [
+    "kol",
+    "scraping",
+    "social-media"
+  ],
   "author": "Your Name",
   "license": "MIT",
   "dependencies": {
-    "puppeteer": "^22.0.0",
-    "express": "^4.18.2",
-    "dotenv": "^16.3.1"
+    "@tailwindcss/forms": "^0.5.10",
+    "@types/react": "^19.1.10",
+    "@types/react-dom": "^19.1.7",
+    "axios": "^1.11.0",
+    "bull": "^4.16.5",
+    "chart.js": "^4.5.0",
+    "cheerio": "^1.1.2",
+    "compression": "^1.8.1",
+    "cors": "^2.8.5",
+    "dotenv": "^16.6.1",
+    "express": "^4.21.2",
+    "helmet": "^8.1.0",
+    "morgan": "^1.10.1",
+    "next": "^15.4.6",
+    "node-cron": "^4.2.1",
+    "p-queue": "^8.1.0",
+    "playwright": "^1.54.2",
+    "puppeteer": "^22.15.0",
+    "puppeteer-extra": "^3.3.6",
+    "puppeteer-extra-plugin-stealth": "^2.11.2",
+    "react": "^19.1.1",
+    "react-chartjs-2": "^5.3.0",
+    "react-dom": "^19.1.1",
+    "redis": "^5.8.1",
+    "sequelize": "^6.37.7",
+    "sqlite3": "^5.1.7",
+    "swr": "^2.3.6",
+    "tailwindcss": "^4.1.12",
+    "typescript": "^5.9.2",
+    "user-agents": "^1.1.632",
+    "winston": "^3.17.0"
   },
   "devDependencies": {
+    "concurrently": "^7.6.0",
     "nodemon": "^3.0.2"
   }
 }
